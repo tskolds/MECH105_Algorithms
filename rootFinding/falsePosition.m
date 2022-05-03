@@ -1,5 +1,5 @@
 function [root, fx, ea, iter] = falsePosition(func, xl, xu, es, maxit, varargin)
-%falsePosition finds the root of a function using false position method
+%falsePosition finds the root of a function using false-position method
 % INPUTS:
 % - func: The function to be analyzed
 % - xl: The first guess at the root or left bracket
@@ -36,7 +36,7 @@ if nargin < 6
     varargin = 0;
 end
 
-% Perform the bisection method
+% Perform the false-position method
 xrold = xl;
 while ea > es
     if func(xl) == 0
